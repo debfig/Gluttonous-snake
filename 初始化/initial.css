@@ -1,0 +1,16 @@
+ /* 清除外边距，内边距，边框 */
+ *{
+     margin: 0px;
+     padding: 0px;
+     border: 0px;
+     box-sizing: border-box; 
+     /* 声明C3盒模型 边框 内边距 不在影响盒子大小，盒子内容是宽高减去边框和内边距的大小 */
+ }
+ /* 可以给超链接去下划线 */
+ a {
+     text-decoration: none;       
+ }
+ /* 去掉无须列表li小圆点 */
+ li {
+          list-style: none;            
+ }

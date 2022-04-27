@@ -1,0 +1,119 @@
+/* bao */
+
+.bao {
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+
+/* 地图 */
+
+.map {
+    float: left;
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border: 10px solid #555;
+    background-color: #ccc;
+}
+
+
+/* 蛇 */
+
+.map>li {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #555;
+    background-color: blanchedalmond;
+}
+
+.map>.head {
+    background-color: rgb(210, 142, 24);
+}
+
+.head {
+    background-color: rgb(210, 99, 19);
+}
+
+.body {
+    background-color: antiquewhite;
+}
+
+
+/* 食物 */
+
+.bao>.map>span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(img/保卫萝卜.gif) no-repeat;
+    background-size: 20px auto;
+}
+
+
+/* 控制 */
+
+.jifeng {
+    float: left;
+    position: relative;
+    width: 200px;
+    height: 600px;
+    border: 5px solid #555;
+    background-color: #ccc;
+}
+
+.jifeng>p {
+    display: block;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: aliceblue;
+    transform: translateX(-50%);
+}
+
+.jifeng>.an {
+    position: absolute;
+    padding: 5px;
+    top: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.an>button {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.an>button:active {
+    border: 1px solid #555;
+}
+
+.jifeng>bt {
+    display: block;
+    position: absolute;
+    width: 150px;
+    top: 240px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.jifeng>.bgm {
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    width: 150px;
+    height: 60px;
+    border: 1px solid #555;
+    transform: translateX(-50%);
+}
+
+.jifeng>.bgm:active {
+    border-color: #ccc;
+}
