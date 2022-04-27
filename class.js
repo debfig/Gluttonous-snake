@@ -87,7 +87,7 @@ function Subject() {
                     setTimeout(function() {
                             console.log(this);
                             alert('撞到身体了\t' + snake.fraction + '分');
-                            history.go(0)
+                            location.reload();
                         }, 1000) //刷新页面
                 }
             }
@@ -182,7 +182,7 @@ function Subject() {
         //等待一秒执行刷新
         setTimeout(function() {
             alert('撞到墙了\t' + snake.fraction + '分');
-            history.go(0);
+            location.reload();
         }, 1000)
     }
 
