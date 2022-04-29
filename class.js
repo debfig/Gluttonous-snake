@@ -229,6 +229,16 @@ bgmp.addEventListener('click', function() {
     }
 })
 
+//定时器
+//定义定时器 刚开始暂停 等点击开始才调用定时器暂停又关闭定时器
+let timer = setInterval(function() {
+    if (temps == 0) {
+        snake.judge_move()
+        snake.Eat_food();
+    }
+}, 150)
+clearInterval(timer);
+
 
 //开始结束
 let kai = document.querySelector('.kai');
@@ -246,6 +256,12 @@ kai.addEventListener('click', function() {
         snake.Render_food(); //第一次渲染食物
         kai.innerHTML = '结束';
         temp++;
+        timer = setInterval(function() {
+            if (temps == 0) {
+                snake.judge_move()
+                snake.Eat_food();
+            }
+        }, 150)
     } else {
         location.reload(); //刷新页面
     }
@@ -269,14 +285,6 @@ jei.addEventListener('click', function() {
 
 });
 
-
-//定时器
-let timer = setInterval(function() {
-    if (temps == 0) {
-        snake.judge_move()
-        snake.Eat_food();
-    }
-}, 150)
 
 
 //获取键盘事件
@@ -303,9 +311,18 @@ document.onkeydown = function(event) {
         if (temps == 0) {
             temps++;
             jei.innerHTML = '继续';
+            //停止定时器
+            clearInterval(timer);
         } else {
             temps--;
             jei.innerHTML = '暂停';
+            //开启定时器
+            timer = setInterval(function() {
+                if (temps == 0) {
+                    snake.judge_move()
+                    snake.Eat_food();
+                }
+            }, 150)
         }
     }
 };
