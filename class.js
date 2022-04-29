@@ -12,6 +12,8 @@ function Subject() {
     this.odjb;
     this.tempMove = 4;
     this.fraction = 0;
+    //速度
+    this.time = 100;
 
 
 
@@ -235,7 +237,7 @@ let timer = setInterval(function() {
         snake.judge_move()
         snake.Eat_food();
     }
-}, 150)
+}, snake.time)
 clearInterval(timer);
 
 
@@ -260,7 +262,7 @@ kai.addEventListener('click', function() {
                 snake.judge_move()
                 snake.Eat_food();
             }
-        }, 150)
+        }, snake.time)
     } else {
         location.reload(); //刷新页面
     }
@@ -285,7 +287,7 @@ jei.addEventListener('click', function() {
                     snake.judge_move()
                     snake.Eat_food();
                 }
-            }, 150)
+            }, snake.time)
         }
     }
 
@@ -328,7 +330,7 @@ document.onkeydown = function(event) {
                     snake.judge_move()
                     snake.Eat_food();
                 }
-            }, 150)
+            }, snake.time)
         }
     }
 };
