@@ -2,6 +2,7 @@
 
 .bao {
     width: 800px;
+    height: 600PX;
     margin: 0 auto;
     margin-top: 50px;
 }
@@ -116,4 +117,17 @@
 
 .jifeng>.bgm:active {
     border-color: #ccc;
+}
+
+
+/* 表单 */
+
+.val {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 200px;
+    margin: -150px 0 0 -100px;
+    background-color: #555;
 }
