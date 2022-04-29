@@ -163,7 +163,6 @@ function Subject() {
                 break;
             case 4:
                 if (li.offsetLeft < this.contentX) {
-                    console.log(li.offsetLeft < this.contentX);
                     this.initial();
                     this.coordinate[0].x += 20;
                     this.move();
@@ -277,9 +276,16 @@ jei.addEventListener('click', function() {
         if (temps == 0) {
             temps++;
             jei.innerHTML = '继续';
+            clearInterval(timer);
         } else {
             temps--;
             jei.innerHTML = '暂停';
+            timer = setInterval(function() {
+                if (temps == 0) {
+                    snake.judge_move()
+                    snake.Eat_food();
+                }
+            }, 150)
         }
     }
 
